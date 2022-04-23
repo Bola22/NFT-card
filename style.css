@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    
+    /* ### Neutral */
+    
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-BG);
+    font-family: "Outfit", -apple-system, sans-serif;
+    color: var(--White);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.card-container {
+    padding: 1em;
+    background-color: var(--card-BG);
+    /* display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column; */
+    border-radius: .5em;
+}
+
+.card-container .Equilibrium {
+    position: relative;
+    border-radius: .5em;
+    max-width: 100%;
+}
+
+/* .card-image div {
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 60%);
+    width: 100%;
+    height: calc(100% - 4px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+
+.card-image div :hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+.card-image div svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+ 
+
+  .Equilibrium:hover {
+    opacity: 0.3;
+    cursor: pointer;
+  } */
+
+h3 {
+    color: var(--White);
+    margin: 1rem 0.5rem 0.5rem 0;
+}
+h3:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.status {
+    margin-bottom: -20px;
+  }
+
+.status ul {
+    display: flex;
+    place-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .status ul li {
+    list-style: none;
+    
+  }
+  .eth {
+    color: hsl(178, 100%, 50%);
+    background-image: url(./images/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+  }
+  .clok {
+    background-image: url(./images/icon-clock.svg);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+  }
+
+ .profile {
+     margin-top: 15px;
+ }
+
+  .creator {
+    background-image: url(./images/image-avatar.png);
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    background-size: contain;
+  }
+
+
+  hr {
+    width: 98%;
+    background-color: hsl(215, 51%, 70%);
+    height: .2px;
+    border: none;
+    
+  }
+
+  span {
+    color: var(--White);
+  }
+  span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+  }
+
+  p {
+      font-weight: 300;
+      color: var(--Soft-blue);
+  }
+
+
+  @media (min-width: 500px) {
+    .card-container {
+      width: 450px;
+      margin: 0 auto 1rem;
+    }
+  }
+
+  .attribution { font-size: 11px; text-align: center; margin-top: 2em; }
+    .attribution a { color: hsl(228, 45%, 44%); }
