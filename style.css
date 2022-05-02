@@ -31,52 +31,55 @@ body {
 }
 
 .card-container {
-    padding: 1em;
+    padding: 25px;
     background-color: var(--card-BG);
-    /* display: flex;
-    justify-content: center;
-    text-align: left;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+    width:350px;
+    height:600px;
+    padding:25px;
     border-radius: .5em;
+    box-shadow: 0px 0px 30px 5px rgba(7, 11, 19, 0.75);
 }
 
 .card-container .Equilibrium {
-    position: relative;
     border-radius: .5em;
     max-width: 100%;
 }
 
-/* .card-image div {
-    position: absolute;
-    top: 0;
-    background-color: hsl(178, 100%, 60%);
-    width: 100%;
-    height: calc(100% - 4px);
-    z-index: 999;
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-  }
+.card-image {
+  position: relative;
+  display: block;
+}
 
-.card-image div :hover {
-    opacity: 1;
-    cursor: pointer;
-  }
-.card-image div svg {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
- 
+.img-view svg {
+  position: absolute;
+  width:50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%)
 
-  .Equilibrium:hover {
-    opacity: 0.3;
-    cursor: pointer;
-  } */
+}
+
+.img-view {
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width: 100%;
+  background-color:hsla(178, 100%, 50%,0.5) ;
+  display:none;
+  border-radius:10px;
+}
+
+.card-image:hover .img-view  {
+  display:block;
+}
 
 h3 {
     color: var(--White);
     margin: 1rem 0.5rem 0.5rem 0;
+    font-weight: 600;
 }
 h3:hover {
     color: var(--Cyan);
@@ -142,6 +145,7 @@ h3:hover {
   p {
       font-weight: 300;
       color: var(--Soft-blue);
+      line-height: 1.4;
   }
 
 
@@ -151,6 +155,17 @@ h3:hover {
       margin: 0 auto 1rem;
     }
   }
+
+  @media (max-width:425px) {
+    .card-container {
+        
+        width:300px;
+       height:550px;
+        
+    
+    }
+   
+}
 
   .attribution { font-size: 11px; text-align: center; margin-top: 2em; }
     .attribution a { color: hsl(228, 45%, 44%); }
